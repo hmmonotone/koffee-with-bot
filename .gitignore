@@ -1,0 +1,27 @@
+# Dependency directories
+node_modules/
+
+# Environment variables
+.env
+
+# IDE or editor files
+.vscode/
+.idea/
+
+# Log files
+logs/
+*.log
+
+# Mac OS-specific files
+.DS_Store
+
+# Compiled binary files
+*.o
+*.out
+
+# Configuration files
+*.config
+
+# Other generated files or directories
+dist/
+coverage/
