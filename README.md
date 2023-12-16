@@ -1,7 +1,7 @@
 ### Koffee With Bot ☕ Chatbot Project Documentation
 
 #### Overview:
-The Goodspace Chatbot project is a real-time chat application that employs Socket.IO for communication between clients and a server. It utilizes Express for serving web pages and handling HTTP requests, MongoDB to store chat history, and OpenAI for generating bot responses based on historical chat data.
+Koffee With Bot is a real-time chat application that employs Socket.IO for communication between clients and a server. It utilizes Express for serving web pages and handling HTTP requests, MongoDB to store chat history, and OpenAI for generating bot responses based on historical chat data.
 
 #### Project Structure:
 - **`server.js`:** Backend file responsible for server setup, WebSocket handling, database connectivity, and bot response generation.
