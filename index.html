@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Goodspace Chatbot</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f6f6f6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-size: cover;
+      background-blend-mode: overlay;
+      background-color: #000;
+    }
+
+    #header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #ff4c00;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      font-size: 32px;
+      border-bottom: 1px solid #ccc;
+      z-index: 1;
+    }
+
+    #main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-top: 60px; 
+      background: linear-gradient(to right bottom, #fefeff, #d7e5ff);
+      overflow-y: auto;
+      z-index: 0;
+    }
+
+    #messages {
+      list-style-type: none;
+      font-size: 18px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 100px;
+    }
+
+    li {
+      margin-top: 20px;
+    }
+
+    .user-message {
+      align-self: flex-end;
+      background-color: #3498db;
+      color: #fff;
+    }
+
+    .bot-message {
+      align-self: flex-start;
+      background-color: #ff4c00;
+      color: #fff;
+    }
+
+    #form {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #fff;
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
+    #input {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 25px;
+      margin-right: 50px;
+      flex-grow: 1;
+      font-size: 24px;
+      transition: border-color 0.3s ease-in-out;
+    }
+
+    #input:focus {
+      outline: none;
+      border-color: #ff4c00;
+    }
+
+    #form > button {
+      background: #ff4c00;
+      border: none;
+      padding: 8px 16px;
+      margin-right: 20px;
+      border-radius: 20px;
+      outline: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    Goodspace Chatbot
+  </div>
+  <div id="main">
+    <ul id="messages">
+      <!-- Messages will appear here -->
+    </ul>
+    <form id="form" action="">
+      <input id="input" autocomplete="off" placeholder="Type a message..." />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
